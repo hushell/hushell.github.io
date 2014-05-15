@@ -1,0 +1,78 @@
+exclude: ['README.md']
+timezone: US/Western
+papers:
+  - layout: paper
+    paper-type: inproceedings
+    selected: no
+    year: 2013
+    img: iccv13wa
+    title: Zero-Shot Learning and Detection of Teeth in Images of Bat Skulls
+    authors: Shell X. Hu, Michael Lam, Sinisa Todorovic, Thomas Dietterich, Maureen O'Leary, Andrea Cirranello, Nancy Simmons and Paul Velazco
+    booktitle: ICCV Workshop on Computer Vision for Accelerated Bioscience
+    doc-url: papers/iccv13wa.pdf
+    venue: workshop
+    code: https://github.com/AVATOL/bat
+    abstract: >
+      Biologists continually collect and analyze images of bat skulls for answering a variety of fundamental questions in biology. One such analysis
+      involves manual annotation of the types and layout of a bat's teeth in the images. To facilitate this biological study, we have developed an
+      approach to detecting and localizing the bat teeth types in unannotated images, leveraging knowledge about the teeth learned from a few
+      annotated images. The key challenge is that the unlabeled images show bat skulls of ``unknown'' species, which may have different types, total 
+      numbers, and layouts of the teeth from the ``known'' species appearing in the labeled images. First, we match the unlabeled images to the 
+      labeled ones. This allows a transfer of  teeth annotations to the unlabeled images. Second, we learn a tree parts model on the transferred 
+      annotations, and use the model for teeth detection and scoring in the unlabeled images. Our evaluation demonstrates good performance, which is 
+      close to our upper bound, that of a model trained on many training examples.
+  - layout: paper
+    paper-type: inproceedings
+    selected: no
+    year: 2013
+    img: iccv13wb
+    title: Learning to Detect Basal Tubules of Nematocysts in SEM Images
+    doc-url: papers/iccv13wb.pdf
+    authors: Michael Lam, Janardhan Rao Doppa, Shell X. Hu, Sinisa Todorovic, Thomas Dietterich, Abigail Reft and Marymegan Daly
+    booktitle: ICCV Workshop on Computer Vision for Accelerated Bioscience
+    venue: workshop
+    code: https://github.com/AVATOL/nematocyst
+    abstract: >
+      This paper presents a learning approach for detecting nematocysts in Scanning Electron Microscope (SEM) images. The image dataset was collected 
+      and made available to us by biologists for the purposes of morphological studies of corals, jellyfish, and other species in the phylum 
+      Cnidaria. Challenges for computer vision presented by this biological domain are rarely seen in general images of natural scenes. We formulate 
+      nematocyst detection as labeling of a regular grid of image patches. This structured prediction problem is specified within two frameworks: CRF 
+      and HC-Search. The CRF uses graph cuts for inference. The HC-Search approach is based on search in the space of outputs. It uses a learned 
+      heuristic function (H) to uncover high-quality candidate labelings of image patches, and then uses a learned cost function (C) to select the 
+      final prediction among the candidates. While locally optimal CRF inference may be sufficient for images of natural scenes, our results 
+      demonstrate that CRF with graph cuts performs poorly on the nematocyst images, and that HC-Search outperforms CRF with graph cuts. This 
+      suggests biological images of flexible objects present new challenges requiring further ad- vances of, or alternatives to existing methods.
+  -
+    layout: paper
+    selected: y
+    paper-type: article 
+    year: 2013
+    title: Toward Real-Time Pedestrian Detection Based on a Deformable Template Model
+    authors: Marco Pedersoli, Jordi Gonzàlez, Xu Hu, Xavier Roca
+    doc-url: papers/towards_real_time.pdf
+    code: https://github.com/hushell/CUHOG
+    img: trt
+    journal: IEEE Transactions on Intelligent Transportation Systems
+    volume: 15(1)
+    abstract: > 
+      Most advanced driving assistance systems already
+      include pedestrian detection systems. Unfortunately, there is still a
+      tradeoff between precision and real time. For a reliable detection,
+      excellent precision–recall such a tradeoff is needed to detect as
+      many pedestrians as possible while, at the same time, avoiding
+      too many false alarms; in addition, a very fast computation is
+      needed for fast reactions to dangerous situations. Recently, novel
+      approaches based on deformable templates have been proposed
+      since these show a reasonable detection performance although
+      they are computationally too expensive for real-time performance.
+      In this paper, we present a system for pedestrian detection based
+      on a hierarchical multiresolution part-based model. The proposed
+      system is able to achieve state-of-the-art detection accuracy due
+      to the local deformations of the parts while exhibiting a speedup
+      of more than one order of magnitude due to a fast coarse-to-fine
+      inference technique. Moreover, our system explicitly infers the
+      level of resolution available so that the detection of small examples
+      is feasible with a very reduced computational cost. We conclude
+      this contribution by presenting how a graphics processing unit-- 
+      optimized implementation of our proposed system is suitable for
+      real-time pedestrian detection in terms of both accuracy and speed.

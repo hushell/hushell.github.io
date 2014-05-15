@@ -1,0 +1,15 @@
+---
+layout: default
+title: Shell Hu | Papers 
+picture: paris
+---
+<div class="page-header">
+  <h3>Papers</h3>
+<blockquote><i>We are concerned with research that will matter in the long run and become more than a footnote in history.<br/>&mdash;Richard Hamming</i></blockquote>
+</div>
+
+<h4>Papers</h4>
+{% for post in site.papers %}
+  {% include paper.html paper=post %}
+{% endfor %}
+
