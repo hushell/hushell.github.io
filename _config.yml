@@ -22,7 +22,7 @@ papers:
       This paper presents a new probabilistic generative model for image segmentation, i.e. the task of partitioning an image into homogeneous regions. Our model is grounded on a mid-level image representation, called a region tree, in which regions are recursively split into subregions until superpixels are reached. Given the region tree, image segmentation is formalized as sampling cuts in the tree from the model. Inference for the cuts is exact, and formulated using dynamic programming. Our tree-cut model can be tuned to sample segmentations at a particular scale of interest out of many possible multiscale image segmentations. This generalizes the common notion that there should be only one correct segmentation per image. Also, it allows moving beyond the standard single-scale evaluation, where the segmentation result for an image is averaged against the corresponding set of coarse and fine human annotations, to conduct a scale-specific evaluation. Our quantitative results are comparable to those of the leading gPb-owt-ucm method, with the notable advantage that we additionally produce a distribution over all possible tree-consistent segmentations of the image.
   - layout: paper
     paper-type: inproceedings
-    selected: no
+    selected: y
     year: 2013
     img: iccv13wa
     title: Zero-Shot Learning and Detection of Teeth in Images of Bat Skulls
@@ -42,7 +42,7 @@ papers:
       close to our upper bound, that of a model trained on many training examples.
   - layout: paper
     paper-type: inproceedings
-    selected: no
+    selected: y
     year: 2013
     img: iccv13wb
     title: Learning to Detect Basal Tubules of Nematocysts in SEM Images
@@ -61,13 +61,12 @@ papers:
       final prediction among the candidates. While locally optimal CRF inference may be sufficient for images of natural scenes, our results 
       demonstrate that CRF with graph cuts performs poorly on the nematocyst images, and that HC-Search outperforms CRF with graph cuts. This 
       suggests biological images of flexible objects present new challenges requiring further ad- vances of, or alternatives to existing methods.
-  -
-    layout: paper
+  - layout: paper
     selected: y
     paper-type: article 
     year: 2013
     title: Toward Real-Time Pedestrian Detection Based on a Deformable Template Model
-    authors: Marco Pedersoli, Jordi Gonzàlez, Xu Hu, Xavier Roca
+    authors: Marco Pedersoli, Jordi Gonzàlez, Shell X. Hu, Xavier Roca
     doc-url: papers/towards_real_time.pdf
     code: https://github.com/hushell/CUHOG
     img: trt
@@ -95,3 +94,41 @@ papers:
       this contribution by presenting how a graphics processing unit-- 
       optimized implementation of our proposed system is suitable for
       real-time pedestrian detection in terms of both accuracy and speed.
+  - layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2013
+    img: icon
+    title: Multi-task Bilinear Classifiers for Visual Domain Adaptation
+    authors: Jiaolong Xu, Sebastian Ramos, Shell X. Hu, David Vázquez, Antonio M. López
+    booktitle: "NIPS Workshop on New Directions in Transfer and Multi-Task: Learning Across Domains and Tasks"
+    doc-url: papers/nipsw13.pdf
+    venue: workshop
+    abstract: >
+      We propose a method that aims to lessen the significant accuracy degradation
+      that a discriminative classifier can suffer when it is trained in a specific domain
+      (source domain) and applied in a different one (target domain). The principal reason
+      for this degradation is the discrepancies in the distribution of the features that
+      feed the classifier in different domains. Therefore, we propose a domain adaptation
+      method that maps the features from the different domains into a common subspace and 
+      learns a discriminative domain-invariant classifier within it. Our algorithm combines 
+      bilinear classifiers and multi-task learning for domain adaptation.
+      The bilinear classifier encodes the feature transformation and classification
+      parameters by a matrix decomposition. In this way, specific feature transformations
+      for multiple domains and a shared classifier are jointly learned in a multi-task
+      learning framework. Focusing on domain adaptation for visual object detection,
+      we apply this method to the state-of-the-art deformable part-based model for cross
+      domain pedestrian detection. Experimental results show that our method significantly 
+      avoids the domain drift and improves the accuracy when compared to several baselines.
+  - layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2010
+    img: hug
+    title: An Event Based GUI Programming Toolkit for Embedded System
+    authors: Shell X. Hu, Congfeng Jiang, Wei Zhang, Jilin Zhang, Ritai Yu and Changping Lv 
+    booktitle: Asia-Pacific Services Computing Conference
+    doc-url: papers/hug.pdf
+    abstract: >
+      Due to various differences in hardware architectures of devices in ubiquitous computing systems, portability and platform-independency become the main challenge for graphics programming in system design. In this paper, we propose an adaptive user interface programming toolkit for system design in ubiquitous computing environment. The toolkit leverages an existing system software infrastructure, making the application programming straightforward and platform independent. This proposed toolkit can be divided into two parts: the first part consists of open source crossplatform graphics libraries which are encapsulated into the platform dependent part of backend library for interacting with specific system. While another one, called core library, is responsible for the functions of control logics, graphics drawing and backend management. To demonstrate the practical use of this toolkit and its portability, a case study is provided for demonstration. The test results on three different embedded systems show its good adaptability on multiplatforms.
+
