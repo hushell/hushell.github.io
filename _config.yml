@@ -11,6 +11,18 @@ papers:
   - layout: paper
     selected: y
     paper-type: inproceedings
+    year: 2018
+    title: SDCA-Powered Inexact Dual Augmented Lagrangian Method for Fast CRF Learning
+    authors: Shell X. Hu, Guillaume Obozinski
+    doc-url: papers/hu18-combined.pdf
+    code: https://github.com/hushell/idal
+    img: idal
+    booktitle: AISTATS
+    abstract: > 
+      We propose an efficient dual augmented La-grangian formulation to learn conditional random fields (CRF). Our algorithm, which can be interpreted as an inexact gradient descent algorithm on the multiplier, does not require to perform global inference iteratively, and requires only a fixed number of stochastic clique-wise updates at each epoch to obtain a sufficiently good estimate of the gradient w.r.t. the Lagrange multipliers. We prove that the proposed algorithm enjoys global linear convergence for both the primal and the dual objectives. Our experiments show that the proposed algorithm outperforms state-of-the-art baselines in terms of speed of convergence.
+  - layout: paper
+    selected: y
+    paper-type: inproceedings
     year: 2015
     title: Tree-Cut for Probabilistic Image Segmentation
     authors: Shell X. Hu, Christopher K. I. Williams, Sinisa Todorovic

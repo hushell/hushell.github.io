@@ -64,6 +64,9 @@
          Errata
       </a>&nbsp;      
     {% endif %}
+    {% if include.paper.doc-url %}
+      <a href="{{ include.paper.doc-url }}" class="label label-info">Pdf</a>
+    {% endif %}
     {% if include.paper.slides %} 
       <a href="{{ include.paper.slides }}" class="label label-info">Slides</a> 
     {% endif %}
