@@ -12,6 +12,62 @@ papers:
     selected: y
     paper-type: inproceedings
     year: 2018
+    title: "beta-BNN: A Rate-Distortion Perspective on Bayesian Neural Networks"
+    authors: Shell X. Hu, Pablo G. Moreno, Andreas Damianou, Neil D. Lawrence
+    doc-url: papers/nips18_bdl.pdf
+    img: bbnn_log
+    booktitle: NeurIPS Workshop on Bayesian Deep Learning
+    abstract: > 
+        We propose an alternative training framework for Bayesian neural networks (BNNs),
+        which is motivated by viewing the Bayesian model for supervised learning as an autoencoder for data transmission.
+        Then, a natural objective can be invoked from the rate-distortion theory.
+        Specifically, we end up minimizing the mutual information between the weights and the dataset
+        with a constraint that the negative log-likelihood is smaller than a certain value.
+        The classical Blahut-Arimoto algorithm for solving this kind of optimization is infeasible
+        due to the intractable expectations over the weights and the dataset, so
+        we develop a new approximation to the steps of the Blahut-Arimoto algorithm. 
+        Our method exhibits some attractive properties
+        over the conventional KL-regularized training of BNNs with fixed Gaussian prior: 
+        firstly, improved stability during optimization; 
+        secondly, a more flexible prior which can be understood from an empirical Bayes viewpoint.
+  - layout: paper
+    selected: y
+    paper-type: inproceedings
+    year: 2018
+    title: Variational Mutual Information Distillation for Transfer Learning
+    authors: Sungsoo Ahn, Shell X. Hu, Andreas Damianou, Neil D. Lawrence, Zhenwen Dai 
+    doc-url: papers/nips18_cl.pdf
+    img: vid_log
+    booktitle: NeurIPS Workshop on Continual Learning
+    abstract: > 
+        We consider the teacher-student framework for knowledge transfer,
+        where the goal is to improve learning of a student neural network,
+        given a teacher neural network pretrained on the same or a similar task.
+        The majority of existing approaches for distilling knowledge from a teacher
+        network to a student network rely on matching either activations or handcrafted
+        features from the teacher network. Instead, in this paper we establish
+        an information-theoretic framework for knowledge distillation which encourages
+        high mutual information between two networks. Our framework can be applied to
+        knowledge transfer between different tasks without any assumptions
+        on the architectures of the teacher and the student network.
+        We empirically validate our proposed framework by demonstrating its
+        improvement over existing methods on various knowledge transfer tasks.
+  - layout: paper
+    selected: y
+    paper-type: inproceedings
+    year: 2018
+    title: Exploring Weight Symmetry in Deep Neural Networks
+    authors: Sergey Zagoruyko, Shell X. Hu, Nikos Komodakis
+    doc-url: papers/symnet.pdf
+    code: https://github.com/szagoruyko/symmetry.pytorch
+    img: symnet_log
+    booktitle: Tech. Report
+    abstract: > 
+        We propose to impose symmetry in neural network parameters to improve parameter usage and make use of dedicated convolution and matrix multiplication routines. Due to significant reduction in the number of parameters as a result of the symmetry constraints, one would expect a dramatic drop in accuracy. Surprisingly, we show that this is not the case, and, depending on network size, symmetry can have little or no negative effect on network accuracy, especially in deep overparameterized networks. We propose several ways to impose block symmetry in recurrent and convolutional neural networks, and show that our symmetry parameterizations satisfy universal approximation property for single hidden layer networks. We extensively evaluate these parameterizations on CIFAR, ImageNet and language modeling datasets, showing significant benefits from the use of symmetry. For instance, our ResNet-101 with channel-wise symmetry has almost 25% less parameters and only 0.2% accuracy loss on ImageNet.
+  - layout: paper
+    selected: y
+    paper-type: inproceedings
+    year: 2018
     title: SDCA-Powered Inexact Dual Augmented Lagrangian Method for Fast CRF Learning
     authors: Shell X. Hu, Guillaume Obozinski
     doc-url: papers/hu18-combined.pdf
