@@ -196,7 +196,7 @@ papers:
     title: An Event Based GUI Programming Toolkit for Embedded System
     authors: Shell X. Hu, Congfeng Jiang, Wei Zhang, Jilin Zhang, Ritai Yu and Changping Lv 
     booktitle: Asia-Pacific Services Computing Conference
-    doc-url: papers/hug.pdf
+    doc-url: papers/hug2010.pdf
     abstract: >
       Due to various differences in hardware architectures of devices in ubiquitous computing systems, portability and platform-independency become the main challenge for graphics programming in system design. In this paper, we propose an adaptive user interface programming toolkit for system design in ubiquitous computing environment. The toolkit leverages an existing system software infrastructure, making the application programming straightforward and platform independent. This proposed toolkit can be divided into two parts: the first part consists of open source crossplatform graphics libraries which are encapsulated into the platform dependent part of backend library for interacting with specific system. While another one, called core library, is responsible for the functions of control logics, graphics drawing and backend management. To demonstrate the practical use of this toolkit and its portability, a case study is provided for demonstration. The test results on three different embedded systems show its good adaptability on multiplatforms.
 
