@@ -58,10 +58,10 @@ papers:
     year: 2018
     title: Exploring Weight Symmetry in Deep Neural Networks
     authors: Sergey Zagoruyko, Shell X. Hu, Nikos Komodakis
-    doc-url: papers/symnet.pdf
-    code: https://github.com/szagoruyko/symmetry.pytorch
+    doc-url: https://arxiv.org/abs/1812.11027
+    code: https://github.com/hushell/deep-symmetry
     img: symnet_log
-    booktitle: Tech. Report
+    booktitle: Arxiv
     abstract: > 
         We propose to impose symmetry in neural network parameters to improve parameter usage and make use of dedicated convolution and matrix multiplication routines. Due to significant reduction in the number of parameters as a result of the symmetry constraints, one would expect a dramatic drop in accuracy. Surprisingly, we show that this is not the case, and, depending on network size, symmetry can have little or no negative effect on network accuracy, especially in deep overparameterized networks. We propose several ways to impose block symmetry in recurrent and convolutional neural networks, and show that our symmetry parameterizations satisfy universal approximation property for single hidden layer networks. We extensively evaluate these parameterizations on CIFAR, ImageNet and language modeling datasets, showing significant benefits from the use of symmetry. For instance, our ResNet-101 with channel-wise symmetry has almost 25% less parameters and only 0.2% accuracy loss on ImageNet.
   - layout: paper
