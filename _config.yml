@@ -11,6 +11,17 @@ papers:
   - layout: paper
     selected: y
     paper-type: inproceedings
+    year: 2019
+    title: "Variational Information Distillation for Knowledge Transfer"
+    authors: Sungsoo Ahn, Shell X. Hu, Andreas Damianou, Neil D. Lawrence, Zhenwen Dai 
+    doc-url: https://arxiv.org/abs/1904.05835
+    img: VID_100
+    booktitle: CVPR
+    abstract: > 
+        Transferring knowledge from a teacher neural network pretrained on the same or a similar task to a student neural network can significantly improve the performance of the student neural network. Existing knowledge transfer approaches match the activations or the corresponding hand-crafted features of the teacher and the student networks. We propose an information-theoretic framework for knowledge transfer which formulates knowledge transfer as maximizing the mutual information between the teacher and the student networks. We compare our method with existing knowledge transfer methods on both knowledge distillation and transfer learning tasks and show that our method consistently outperforms existing methods. We further demonstrate the strength of our method on knowledge transfer across heterogeneous network architectures by transferring knowledge from a convolutional neural network (CNN) to a multi-layer perceptron (MLP) on CIFAR-10. The resulting MLP significantly outperforms the-state-of-the-art methods and it achieves similar performance to the CNN with a single convolutional layer.
+  - layout: paper
+    selected: y
+    paper-type: inproceedings
     year: 2018
     title: "beta-BNN: A Rate-Distortion Perspective on Bayesian Neural Networks"
     authors: Shell X. Hu, Pablo G. Moreno, Andreas Damianou, Neil D. Lawrence
@@ -57,7 +68,7 @@ papers:
     paper-type: inproceedings
     year: 2018
     title: Exploring Weight Symmetry in Deep Neural Networks
-    authors: Sergey Zagoruyko, Shell X. Hu, Nikos Komodakis
+    authors: Shell X. Hu, Sergey Zagoruyko, Nikos Komodakis
     doc-url: https://arxiv.org/abs/1812.11027
     code: https://github.com/hushell/deep-symmetry
     img: symnet_log
