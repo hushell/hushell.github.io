@@ -12,6 +12,18 @@ papers:
     selected: y
     paper-type: inproceedings
     year: 2019
+    title: "Empirical Bayes Meta-Learning with Synthetic Gradients"
+    authors: Shell X. Hu, Pablo G. Moreno, Xi Shen, Yang Xiao, Guillaume Obozinski, Neil D. Lawrence, Andreas Damianou 
+    doc-url: papers/nips19_ml.pdf
+    code: https://github.com/hushell/sgeb
+    img: bbnn_log
+    booktitle: Preprint
+    abstract: > 
+     We revisit the hierarchical Bayes and empirical Bayes formulations for multi-task learning, which can naturally be applied to meta-learning. The evidence lower bound of the marginal log-likelihood of empirical Bayes decomposes as a sum of local KL divergences between the variational posterior and the true posterior of each task. We derive an amortized variational inference that couples all the variational posteriors into a meta-model, which consists of a synthetic gradient network and an initialization network. Our empirical results on the mini-ImageNet benchmark for episodic few-shot classification significantly outperform previous state-of-the-art methods.
+  - layout: paper
+    selected: y
+    paper-type: inproceedings
+    year: 2019
     title: "Variational Information Distillation for Knowledge Transfer"
     authors: Sungsoo Ahn, Shell X. Hu, Andreas Damianou, Neil D. Lawrence, Zhenwen Dai 
     doc-url: https://arxiv.org/abs/1904.05835
@@ -73,7 +85,7 @@ papers:
     doc-url: https://arxiv.org/abs/1812.11027
     code: https://github.com/hushell/deep-symmetry
     img: symnet_log
-    booktitle: Arxiv
+    booktitle: CVIU
     abstract: > 
         We propose to impose symmetry in neural network parameters to improve parameter usage and make use of dedicated convolution and matrix multiplication routines. Due to significant reduction in the number of parameters as a result of the symmetry constraints, one would expect a dramatic drop in accuracy. Surprisingly, we show that this is not the case, and, depending on network size, symmetry can have little or no negative effect on network accuracy, especially in deep overparameterized networks. We propose several ways to impose block symmetry in recurrent and convolutional neural networks, and show that our symmetry parameterizations satisfy universal approximation property for single hidden layer networks. We extensively evaluate these parameterizations on CIFAR, ImageNet and language modeling datasets, showing significant benefits from the use of symmetry. For instance, our ResNet-101 with channel-wise symmetry has almost 25% less parameters and only 0.2% accuracy loss on ImageNet.
   - layout: paper
