@@ -1,4 +1,10 @@
 hushell.github.io
 =================
 
-My Website
+# Commands
+```
+jekyll build
+jekyll serve
+```
+
+

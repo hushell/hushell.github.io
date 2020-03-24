@@ -11,13 +11,42 @@ papers:
   - layout: paper
     selected: y
     paper-type: inproceedings
+    year: 2020
+    title: "Empirical Bayes Transductive Meta-Learning with Synthetic Gradients"
+    authors: Shell X. Hu, Pablo G. Moreno, Yang Xiao, Xi Shen, Guillaume Obozinski, Neil D. Lawrence, Andreas Damianou 
+    doc-url: https://openreview.net/forum?id=Hkg-xgrYvH
+    code: https://github.com/hushell/sib_meta_learn
+    img: SIB_gm
+    booktitle: ICLR
+    abstract: > 
+        We propose a meta-learning approach that learns from multiple tasks in a transductive setting, by leveraging the unlabeled query set in addition to the support set to generate a more powerful model for each task. To develop our framework, we revisit the empirical Bayes formulation for multi-task learning. The evidence lower bound of the marginal log-likelihood of empirical Bayes decomposes as a sum of local KL divergences between the variational posterior and the true posterior on the query set of each task.
+        We derive a novel amortized variational inference that couples all the variational posteriors via a meta-model, which consists of a synthetic gradient network and an initialization network. Each variational posterior is derived from synthetic gradient descent to approximate the true posterior on the query set, although where we do not have access to the true gradient.  
+        Our results on the Mini-ImageNet and CIFAR-FS benchmarks for episodic few-shot classification outperform previous state-of-the-art methods.
+        Besides, we conduct two zero-shot learning experiments to further explore the potential of the synthetic gradient.
+  - layout: paper
+    selected: y
+    paper-type: dissertation
+    year: 2019
+    title: "Towards Efficient Learning of Graphical Models and Neural Networks with Variational Techniques"
+    authors: Shell X. Hu
+    institution: École des Ponts ParisTech, Université Paris-Est
+    doc-url: papers/shell_xu_hu_thesis_v6.pdf
+    img: enpc_log
+    slides: papers/defense_talk.pdf
+    abstract: > 
+        The primary goal of this thesis is to explore better variational formulations for 
+        probabilistic graphical models and deep neural networks in terms of computational efficiency 
+        or sample efficiency.
+  - layout: paper
+    selected: y
+    paper-type: inproceedings
     year: 2019
     title: "Empirical Bayes Meta-Learning with Synthetic Gradients"
     authors: Shell X. Hu, Pablo G. Moreno, Xi Shen, Yang Xiao, Guillaume Obozinski, Neil D. Lawrence, Andreas Damianou 
     doc-url: papers/nips19_ml.pdf
-    code: https://github.com/hushell/sgeb
-    img: bbnn_log
-    booktitle: Preprint
+    code: https://github.com/hushell/sib_meta_learn
+    img: SIB_100
+    booktitle: NeurIPS Workshop on Meta-Learning
     abstract: > 
      We revisit the hierarchical Bayes and empirical Bayes formulations for multi-task learning, which can naturally be applied to meta-learning. The evidence lower bound of the marginal log-likelihood of empirical Bayes decomposes as a sum of local KL divergences between the variational posterior and the true posterior of each task. We derive an amortized variational inference that couples all the variational posteriors into a meta-model, which consists of a synthetic gradient network and an initialization network. Our empirical results on the mini-ImageNet benchmark for episodic few-shot classification significantly outperform previous state-of-the-art methods.
   - layout: paper
