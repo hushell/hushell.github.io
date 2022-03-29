@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+          content="Pushing the Limits of Simple Pipelines for Few-Shot Learning: External Data and Fine-Tuning Make a Difference">
+    <meta name="author" content="Shell Xu Hu,
+                                Da Li,
+                                Jan Stühmer,
+                                Minyoung Kim,
+								Timothy M. Hospedales">
+
+    <title>Pushing the Limits of Simple Pipelines for Few-Shot Learning: External Data and Fine-Tuning Make a Difference</title>
+    <!-- Bootstrap core CSS -->
+    <!--link href="bootstrap.min.css" rel="stylesheet"-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="offcanvas.css" rel="stylesheet">
+    <!--    <link rel="icon" href="img/favicon.gif" type="image/gif">-->
+</head>
+
+<body>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container"></div>
+    <h2>Pushing the Limits of Simple Pipelines for Few-Shot Learning:<br> 
+        External Data and Fine-Tuning Make a Difference</h2>
+    <h3>(CVPR 2022)</h3>
+    <p class="abstract">TL;DR: A three-stage pipeline for few-shot learning called PMF: Pre-training &#8594; Meta-training (ProtoNet) &#8594; Fine-tuning in meta-test.</p>
+    <hr>
+    <p class="authors">
+        <a href="http://hushell.github.io/"> Shell Xu Hu</a>,
+        <a href="https://dali-dl.github.io/"> Da Li*</a>,
+        <a href="https://scholar.google.com/citations?user=pGukv5YAAAAJ&hl=en"> Jan Stühmer*</a>,</br>
+        <a href="https://sites.google.com/site/mikim21/"> Minyoung Kim*</a>,
+        <a href="https://homepages.inf.ed.ac.uk/thospeda/"> Timothy Hospedales</a>
+    </p>
+    <div class="btn-group" role="group" aria-label="Top menu">
+        <a class="btn btn-primary" href="http://hushell.github.io/pmf/">Paper</a>
+        <a class="btn btn-primary" href="http://hushell.github.io/pmf/">Gradio demo</a>
+        <a class="btn btn-primary" href="https://github.com/hushell/pmf_cvpr22">Code</a>
+        <a class="btn btn-primary" href="http://hushell.github.io/pmf/">Poster</a>
+        <a class="btn btn-primary" href="http://hushell.github.io/pmf/">Slides</a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="section">
+        <div class="vcontainer">
+            <iframe class='video' src="https://www.youtube.com/embed/iEC9lh18laQ" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+        </div>
+        <hr>
+        <p>
+        Few-shot learning (FSL) is an important and topical problem in computer vision that has motivated extensive research into numerous methods spanning from sophisticated meta-learning methods to simple transfer learning baselines. We seek to push the limits of a simple-but-effective pipeline for  real-world few-shot image classification in practice. To this end, we explore few-shot learning from the perspective of neural architecture, as well as a three stage pipeline of pre-training on external data, meta-training with labelled few-shot tasks, and task-specific fine-tuning on unseen tasks. We investigate questions such as: &#9312; How pre-training on external data benefits FSL? &#9313; How state of the art transformer architectures can be exploited? and &#9314; How to best exploit fine-tuning? Ultimately, we show that a simple transformer-based pipeline yields surprisingly good performance on standard benchmarks such as Mini-ImageNet, CIFAR-FS, CDFSL and Meta-Dataset.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <hr>
+        <p>
+        </p>
+        <div class="row align-items-center">
+            <div class="col justify-content-center text-center">
+                <img src="img/pipeline_fig-0.png" alt="overview" style="width:100%">
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Results</h2>
+        <hr>
+        <p>
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Bibtex</h2>
+        <hr>
+        <div class="bibtexsection">
+            @inproceedings{hu2022pmf,
+                author = {Hu, Shell Xu
+                          and Li, Da
+                          and St\"uhmer, Jan
+                          and Kim, Minyoung
+                          and Hospedales, Timothy M.},
+                title = {Pushing the Limits of Simple Pipelines for Few-Shot Learning:
+                         External Data and Fine-Tuning Make a Difference},
+                booktitle = {CVPR},
+                year={2022}
+            }
+        </div>
+    </div>
+
+    <hr>
+
+    <footer>
+        <p>Please send your feedback and questions to <a href="http://hushell.github.io/">Shell Xu Hu</a> or <a href="https://homepages.inf.ed.ac.uk/thospeda/">Timothy Hospedales</a></p>
+    </footer>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
