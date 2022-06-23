@@ -87,7 +87,7 @@
 <div class="container">
     <div class="section">
         <div class="vcontainer">
-            <iframe class='video' src="https://www.youtube.com/watch?v=XQqUnFJgAmM" frameborder="0"
+            <iframe class='video' src="https://www.youtube.com/embed/XQqUnFJgAmM" frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
         </div>
@@ -151,7 +151,9 @@ height=318>
         pre-trained vision transformer (ViT) can be turned into an object detector for
         novel objects by solving a Normalized Cut optimization without further training [6].
         </p>
-        <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0 align=center
+
+        <div align=center>
+        <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
          style='border-collapse:collapse;border:none'>
          <tr>
           <td width=319 valign=top style='width:159.6pt;padding:.25in 5.4pt .25in 5.4pt'>
@@ -191,6 +193,8 @@ height=318>
           </td>
          </tr>
         </table>
+        </div>
+
         <p class=MsoCaption style='margin-top:5.0pt;text-align:justify'><b>Figure 2</b>: An
         example showing DINO self-supervised ViT is capable of recognizing novel
         objects (note that pokemon is not included in the ImageNet -- the train-set of
@@ -372,7 +376,6 @@ height=318>
             # supp_y: label of support set
             # RandomDataAugmentation: apply random augmentations
             # ProtoNet: apply backbone on data and compute loss
-
             backbone_cpy.load_state_dict(backbone.state_dict())
             optimizer = Adam(backbone_cpy.parameters(), lr=lr)
             for t in range(num_steps):
