@@ -95,6 +95,14 @@ h2 {
   text-align:left;
 }
 
+.codeblock {
+  font-family: "Courier",monospace;
+  font-size:18px;
+  white-space:pre;
+  background-color: #f4f4f4;
+  text-align:left;
+}
+
 .canvas-row canvas {
   max-width:100%;
 }

@@ -323,8 +323,8 @@ height=318>
         
         </div>
         
-        <p class=MsoCaption align=center style='margin-top:5.0pt;text-align:center'>Figure
-        3: Comparison of feature representation in t-SNE plot for pre-trained backbone
+        <p class=MsoCaption align=center style='margin-top:5.0pt;text-align:center'><b>Figure
+            3</b>: Comparison of feature representation in t-SNE plot for pre-trained backbone
         with and without meta-training.</p>
 
         <p>We also
@@ -336,8 +336,8 @@ height=318>
         style='font-size:10.0pt;line-height:107%'><img width=576 height=221
         id="Picture 6" src="img/tab2.png"></span></p>
         
-        <p class=MsoCaption align=center style='margin-top:5.0pt;text-align:center'>Table
-        2: The impact of architecture and pre-training on state-of-the-art few-shot
+        <p class=MsoCaption align=center style='margin-top:5.0pt;text-align:center'><b>Table
+            2</b>: The impact of architecture and pre-training on state-of-the-art few-shot
         learners: MetaQDA, MetaOptNet.</p>
         
         <p>From the
@@ -373,22 +373,28 @@ height=318>
         the support set. The PyTorch-like pseudo code of backbone update is shown as
         follows.</p>
 
-        <pre><code class="python">
+        <div class="codeblock">
+        <code class="python">
             # supp_x: input data of support set
             # supp_y: label of support set
-            # RandomDataAugmentation: apply random augmentations
-            # ProtoNet: apply backbone on data and compute loss
+            # RandomDataAugmentation: apply random data augmentations
+            # ProtoNet: apply backbone on data, compute prototypes and compute loss
+            # lr: hyper-parameter to be searched
+
             backbone_cpy.load_state_dict(backbone.state_dict())
             optimizer = Adam(backbone_cpy.parameters(), lr=lr)
+
             for t in range(num_steps):
                 aug_supp_x = RandomDataAugmentation(supp_x)
-                loss = ProtoNet(backbone_cpy, aug_supp_x, supp_y)
+                pseudo_query_x = RandomDataAugmentation(supp_x)
+                prototypes = Centroids(backbone_cpy(aug_supp_x), supp_y)
+                loss = CosineSimilarity(prototypes, backbone_cpy(pseudo_query_x))
                 loss.backward()
                 optimizer.step()
-        </code></pre>
+        </code>
+        </div>
 
-        
-        <p>We observe that the fine-tuning performance is relatively sensitive to the choice
+        <p style='margin-top:.15in'>We observe that the fine-tuning performance is relatively sensitive to the choice
         of learning rate (lr). However, existing few-shot learning problem formulation
         does not offer a validation set for each task to choose the best learning rate
         for fine-tuning. In practice, this is not a big problem when deploying the
@@ -474,6 +480,96 @@ height=318>
         </div>
     </div>
 
+
+    <div class="section">
+        <h2>References</h2>
+        <hr>
+
+        <p class=MsoListParagraphCxSpFirst style='margin:0in;margin-bottom:.0001pt;
+        text-align:justify;text-indent:0in;line-height:normal;text-autospace:none'><span
+        lang=EN-CA style='font-size:9.0pt'>[1] </span><span style='font-size:9.0pt;
+        font-family:"Arial","sans-serif";color:#222222;background:white'>Ericsson,
+        Linus, et al. &quot;Self-Supervised Representation Learning: Introduction,
+        advances, and challenges.&quot;&nbsp;<i>IEEE Signal Processing Magazine</i>&nbsp;39.3
+        (2022): 42-62.</span></p>
+        
+        <p class=MsoListParagraphCxSpMiddle style='margin:0in;margin-bottom:.0001pt;
+        text-align:justify;text-indent:0in;line-height:normal;text-autospace:none'><span
+        lang=EN-CA style='font-size:9.0pt'>[2] </span><span style='font-size:9.0pt;
+        font-family:"Arial","sans-serif";color:#222222;background:white'>Bommasani,
+        Rishi, et al. &quot;On the opportunities and risks of foundation
+        models.&quot;&nbsp;<i>arXiv preprint arXiv:2108.07258</i>&nbsp;(2021).</span></p>
+        
+        <p class=MsoListParagraphCxSpMiddle style='margin:0in;margin-bottom:.0001pt;
+        text-align:justify;text-indent:0in;line-height:normal;text-autospace:none'><span
+        lang=EN-CA style='font-size:9.0pt'>[3] </span><span style='font-size:9.0pt;
+        font-family:"Arial","sans-serif";color:#222222;background:white'>Finn, Chelsea,
+        Pieter Abbeel, and Sergey Levine. &quot;Model-agnostic meta-learning for fast
+        adaptation of deep networks.&quot;&nbsp;<i>International conference on machine
+        learning</i>. PMLR, 2017.</span></p>
+        
+        <p class=MsoListParagraphCxSpMiddle style='margin:0in;margin-bottom:.0001pt;
+        text-align:justify;text-indent:0in;line-height:normal;text-autospace:none'><span
+        lang=EN-CA style='font-size:9.0pt'>[4] </span><span style='font-size:9.0pt;
+        font-family:"Arial","sans-serif";color:#222222;background:white'>Caron,
+        Mathilde, et al. &quot;Emerging properties in self-supervised vision
+        transformers.&quot;&nbsp;<i>Proceedings of the IEEE/CVF International
+        Conference on Computer Vision</i>. 2021.</span></p>
+        
+        <p class=MsoListParagraphCxSpMiddle style='margin:0in;margin-bottom:.0001pt;
+        text-align:justify;text-indent:0in;line-height:normal;text-autospace:none'><span
+        lang=EN-CA style='font-size:9.0pt'>[5] </span><span style='font-size:9.0pt;
+        font-family:"Arial","sans-serif";color:#222222;background:white'>He, Kaiming,
+        et al. &quot;Momentum contrast for unsupervised visual representation
+        learning.&quot;&nbsp;<i>Proceedings of the IEEE/CVF conference on computer
+        vision and pattern recognition</i>. 2020.</span></p>
+        
+        <p class=MsoListParagraphCxSpMiddle style='margin:0in;margin-bottom:.0001pt;
+        text-align:justify;text-indent:0in;line-height:normal;text-autospace:none'><span
+        lang=EN-CA style='font-size:9.0pt'>[6] </span><span style='font-size:9.0pt;
+        font-family:"Arial","sans-serif";color:#222222;background:white'>Wang, Yangtao,
+        et al. &quot;Self-supervised transformers for unsupervised object discovery
+        using normalized cut.&quot;&nbsp;<i>Proceedings of the IEEE/CVF Conference on
+        Computer Vision and Pattern Recognition</i>. 2022.</span></p>
+        
+        <p class=MsoListParagraphCxSpMiddle style='margin:0in;margin-bottom:.0001pt;
+        text-align:justify;text-indent:0in;line-height:normal;text-autospace:none'><span
+        lang=EN-CA style='font-size:9.0pt'>[7] </span><span style='font-size:9.0pt;
+        font-family:"Arial","sans-serif";color:#222222;background:white'>Snell, Jake,
+        Kevin Swersky, and Richard Zemel. &quot;Prototypical networks for few-shot
+        learning.&quot;&nbsp;<i>Advances in neural information processing systems</i>&nbsp;30
+        (2017).</span></p>
+        
+        <p class=MsoListParagraphCxSpMiddle style='margin:0in;margin-bottom:.0001pt;
+        text-align:justify;text-indent:0in;line-height:normal;text-autospace:none'><span
+        lang=EN-CA style='font-size:9.0pt'>[8] </span><span style='font-size:9.0pt;
+        font-family:"Arial","sans-serif";color:#222222;background:white'>Hu, Shell Xu,
+        et al. &quot;Empirical bayes transductive meta-learning with synthetic
+        gradients.&quot;&nbsp;<i>arXiv preprint arXiv:2004.12696</i>&nbsp;(2020).</span></p>
+        
+        <p class=MsoListParagraphCxSpMiddle style='margin:0in;margin-bottom:.0001pt;
+        text-align:justify;text-indent:0in;line-height:normal;text-autospace:none'><span
+        lang=EN-CA style='font-size:9.0pt'>[9] </span><span style='font-size:9.0pt;
+        font-family:"Arial","sans-serif";color:#222222;background:white'>Lee, Kwonjoon,
+        et al. &quot;Meta-learning with differentiable convex optimization.&quot;&nbsp;<i>Proceedings
+        of the IEEE/CVF conference on computer vision and pattern recognition</i>.
+        2019.</span></p>
+        
+        <p class=MsoListParagraphCxSpMiddle style='margin:0in;margin-bottom:.0001pt;
+        text-align:justify;text-indent:0in;line-height:normal;text-autospace:none'><span
+        lang=EN-CA style='font-size:9.0pt'>[10] </span><span style='font-size:9.0pt;
+        font-family:"Arial","sans-serif";color:#222222;background:white'>Zhang, Xueting,
+        et al. &quot;Shallow bayesian meta learning for real-world few-shot
+        recognition.&quot;&nbsp;<i>Proceedings of the IEEE/CVF International Conference
+        on Computer Vision</i>. 2021.</span></p>
+        
+        <p class=MsoListParagraphCxSpLast style='margin:0in;margin-bottom:.0001pt;
+        text-align:justify;text-indent:0in;line-height:normal;text-autospace:none'><span
+        lang=EN-CA style='font-size:9.0pt'>[11] </span><span style='font-size:9.0pt;
+        font-family:"Arial","sans-serif";color:#222222;background:white'>Radford, Alec,
+        et al. &quot;Learning transferable visual models from natural language
+        supervision.&quot;&nbsp;<i>International Conference on Machine Learning</i>.
+        PMLR, 2021.</span><span style='font-size:9.0pt'> </span></p>
     <hr>
 
     <footer>
